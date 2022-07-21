@@ -1,12 +1,9 @@
 {% extends 'base.html' %}
 
-<head>
-  <title>{{title}}</title>
-</head>
+{% block title %}
+  {{ title }}
+{% endblock %}
 
 {% block content %}
-<main>
-  <h1>{{text}}</h1>
-</main>
-
+  <h1>{{ text }}</h1>
 {% endblock %}
