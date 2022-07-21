@@ -14,7 +14,13 @@ def index(request):
 
 def group_posts(request):
     template = 'posts/group_list.html'
-    return render(request, template)
+    title = 'Группы Yatube'
+    text = 'Здесь будет информация о группах проекта Yatube'
+    context = {
+        'title' : title,
+        'text' : text,
+    }
+    return render(request, template, context)
 
 def show_base_template(request):
     template = 'base.html'
