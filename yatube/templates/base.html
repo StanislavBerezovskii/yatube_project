@@ -25,15 +25,13 @@
       {% include 'includes/header.html' %}
     </header>
     <main>
-        <!-- класс py-5 создает отступы сверху и снизу блока -->
-        <div class="container py-5">
-          <h1>Последние обновления на сайте</h1>
-          <article>
-            {% block content %}
-              Основной текст страницы
-            {% endblock %}
-          </article>
-        </div>
+      <div class="container py-5">
+        <article>
+          {% block content %}
+            Основной текст страницы
+          {% endblock %}
+        </article>
+      </div>
     </main>
     <footer>
       {% include 'includes/footer.html' %}
