@@ -1,7 +1,6 @@
 # posts/views.py
-from django.http import HttpResponse
-from django.shortcuts import render
-from .models import Post
+from django.shortcuts import render, get_object_or_404
+from .models import Post, Group
 
 def index(request):
     title = 'Новости'
@@ -14,16 +13,19 @@ def index(request):
     }
     return render(request, 'posts/index.html', context) 
 
-def group_posts(request):
-    template = 'posts/group_list.html'
-    title = 'Группы Yatube'
-    text = 'Здесь будет информация о группах проекта Yatube'
+def group_posts(request, slug):
+    group = get_object_or_404(Group, slug=slug)
+    posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
+    title = f'Последние записи сообщества {group.title}'
+    text = f'Последние записи сообщества {group.title}'
     context = {
-        'title' : title,
-        'text' : text,
+        'group': group,
+        'posts': posts,
+        'title': title,
+        'text': text,
     }
-    return render(request, template, context)
+    return render(request, 'posts/group_list.html', context)
 
 def show_base_template(request):
     template = 'base.html'
-    return render(request,template)
+    return render(request, template)
