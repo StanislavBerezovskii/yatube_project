@@ -1,21 +1,23 @@
 # Yatube Project
-### Описание
-Данный проект создан как уникальная социальная сеть для блогеров.
-### Технологии
+
+### Description
+This project was created as a unique social network for bloggers.
+
+### Technologies
 Python 3.7
 Django 2.2.19
-### Запуск проекта в dev-режиме
-- Установите и активируйте виртуальное окружение
-- Установите зависимости из файла requirements.txt
+
+### Launching the project in dev mode
+- Install and activate the virtual environment
+- Install dependencies from requirements.txt file
 ```
 pip install -r requirements.txt
 ``` 
-- В папке с файлом manage.py выполните команду:
+- Run the command in the folder with the manage.py file:
 ```
 python3 manage.py runserver
 ```
-### Авторы
-Станислав Березовский
-
+### Author
+Stanislav Berezovskii
 
 > Written with [StackEdit](https://stackedit.io/).
