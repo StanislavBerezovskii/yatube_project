@@ -19,5 +19,3 @@ python3 manage.py runserver
 ```
 ### Author
 Stanislav Berezovskii
-
-> Written with [StackEdit](https://stackedit.io/).
